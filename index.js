@@ -35,4 +35,4 @@ function changeLeastFavoriteCustomer() {
 upperCaseCustomerName(); 
 setBestCustomer();       
 overwriteBestCustomer();  
-changeLeastFavoriteCustomer();  /
+changeLeastFavoriteCustomer(); 

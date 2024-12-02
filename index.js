@@ -1,35 +1,45 @@
-// Declare customerName in global scope
+// Declare customerName globally
 var customerName = 'bob';
 
-// Function to uppercase customerName
+
 function upperCaseCustomerName() {
+
   customerName = customerName.toUpperCase();
 }
+
+// Call the function
+upperCaseCustomerName();
 
 // Declare bestCustomer in global scope
 var bestCustomer;
 
-// Function to set bestCustomer
 function setBestCustomer() {
-  bestCustomer = 'not bob';
+  bestCustomer = 'not bob'; 
 }
+
+// No return value needed, just modify the global variable
+setBestCustomer();
 
 // Function to overwrite bestCustomer
 function overwriteBestCustomer() {
   bestCustomer = 'maybe bob';
 }
 
-// Declare leastFavoriteCustomer as a constant in global scope
+// Declare leastFavoriteCustomer as a constant globally
 const leastFavoriteCustomer = 'Alice';
 
-// Function to attempt to change leastFavoriteCustomer
+// Function that attempts to change leastFavoriteCustomer
 function changeLeastFavoriteCustomer() {
+  // Trying to reassign a const will throw an error
   try {
-    leastFavoriteCustomer = 'Bob';  
+    leastFavoriteCustomer = 'Bob';  // This will throw an error
   } catch (error) {
-    console.log(error);
+    console.log(error); 
   }
 }
+
+// Call the function
+changeLeastFavoriteCustomer();
 
 // Example function calls
 upperCaseCustomerName(); 

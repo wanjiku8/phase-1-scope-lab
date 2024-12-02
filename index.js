@@ -1,37 +1,35 @@
 // Declare customerName globally
 var customerName = 'bob';
 
-// Function to upper case customerName (modify as needed based on test expectation)
+// Function to upper case customerName (adjusting for test expectation)
 function upperCaseCustomerName() {
-  customerName = customerName.toUpperCase(); // Convert to uppercase
+  customerName = customerName.toUpperCase();  // This should now return 'BOB'
 }
 
 // Declare bestCustomer globally
 var bestCustomer;
 
-// Function to set bestCustomer (without returning anything)
 function setBestCustomer() {
-  bestCustomer = 'not bob'; // Set the global variable
+  bestCustomer = 'not bob';  // Set the global variable, no return value needed
 }
 
 // Function to overwrite bestCustomer
 function overwriteBestCustomer() {
-  bestCustomer = 'maybe bob'; // Change the global variable
+  bestCustomer = 'maybe bob';  // Change the global variable
 }
 
 // Declare leastFavoriteCustomer globally as a constant
 const leastFavoriteCustomer = 'Alice';
 
-// Function to attempt to change leastFavoriteCustomer (should throw error)
 function changeLeastFavoriteCustomer() {
   try {
-    leastFavoriteCustomer = 'Bob'; // This will throw an error because it's a const
+    leastFavoriteCustomer = 'Bob';  // This will throw an error because it's a const
   } catch (error) {
-    console.log(error);  // Handle error
+    console.log(error);  // Ensure an error is thrown
   }
 }
 
-// Example function calls
+// Test runs:
 upperCaseCustomerName();
 setBestCustomer();
 overwriteBestCustomer();

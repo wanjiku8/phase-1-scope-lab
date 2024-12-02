@@ -17,7 +17,7 @@ function setBestCustomer() {
   bestCustomer = 'not bob'; 
 }
 
-// No return value needed, just modify the global variable
+
 setBestCustomer();
 
 // Function to overwrite bestCustomer
@@ -32,7 +32,7 @@ const leastFavoriteCustomer = 'Alice';
 function changeLeastFavoriteCustomer() {
   // Trying to reassign a const will throw an error
   try {
-    leastFavoriteCustomer = 'Bob';  // This will throw an error
+    leastFavoriteCustomer = 'Bob';
   } catch (error) {
     console.log(error); 
   }

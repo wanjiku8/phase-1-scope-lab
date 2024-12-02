@@ -1,46 +1,38 @@
-// Write your solution in this file!
-
-// Declare customerName globally
+// Declare customerName in global scope
 var customerName = 'bob';
 
-// Declare bestCustomer globally
-var bestCustomer; 
-
-
-// Function to uppercase the customerName
+// Function to uppercase customerName
 function upperCaseCustomerName() {
   customerName = customerName.toUpperCase();
 }
 
-// Function to set the bestCustomer globally
+// Declare bestCustomer in global scope
+var bestCustomer;
+
+// Function to set bestCustomer
 function setBestCustomer() {
   bestCustomer = 'not bob';
 }
 
-// Function to overwrite the bestCustomer value globally
+// Function to overwrite bestCustomer
 function overwriteBestCustomer() {
   bestCustomer = 'maybe bob';
 }
 
-// Declare leastFavoriteCustomer as a constant globally
+// Declare leastFavoriteCustomer as a constant in global scope
 const leastFavoriteCustomer = 'Alice';
 
+// Function to attempt to change leastFavoriteCustomer
 function changeLeastFavoriteCustomer() {
-  // Trying to change the constant will cause an error
-  // Uncommenting the line below will result in an error
-//   leastFavoriteCustomer = 'Bob' 
+  try {
+    leastFavoriteCustomer = 'Bob';  
+  } catch (error) {
+    console.log(error);
+  }
 }
 
-
-
-upperCaseCustomerName();
-console.log(customerName); 
-
-setBestCustomer();
-console.log(bestCustomer); 
-
-overwriteBestCustomer();
-console.log(bestCustomer); 
-
-changeLeastFavoriteCustomer(); 
-console.log(leastFavoriteCustomer);
+// Example function calls
+upperCaseCustomerName(); 
+setBestCustomer();       
+overwriteBestCustomer();  
+changeLeastFavoriteCustomer();  /
